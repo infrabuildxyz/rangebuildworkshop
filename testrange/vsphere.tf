@@ -74,6 +74,9 @@ resource "vsphere_virtual_machine" "linux" {
 
   folder = var.folder
 
+  wait_for_guest_ip_timeout = -1
+  wait_for_guest_net_timeout = -1
+
   network_interface {
     network_id     = data.vsphere_network.network.id
     adapter_type   = "vmxnet3"
