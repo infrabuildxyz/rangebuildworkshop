@@ -13,6 +13,9 @@ jobs:
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
       AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      TF_VAR_vsphere_user: ${{ secrets.TF_VAR_VSPHERE_USER }}
+      TF_VAR_vsphere_password: ${{ secrets.TF_VAR_VSPHERE_PASSWORD }}
+      TF_VAR_vsphere_server: ${{ secrets.TF_VAR_VSPHERE_SERVER }}
 
     # Use the Bash shell regardless whether the GitHub Actions runner is ubuntu-latest, macos-latest, or windows-latest
     defaults:
