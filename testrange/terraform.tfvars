@@ -55,6 +55,21 @@ vms = {
       "#!/bin/bash"
     ]
   },
+  testvm4 = {
+    name          = "testvm4"
+    customize     = true
+    template      = "centos7"
+    num_cpus      = 2
+    memory        = 4096
+    ipv4_address  = "192.168.173.154"
+    netmask       = "24"
+    gateway       = "192.168.173.254"
+    domain_suffix = "frostbytes.io"
+    mac_address   = "00:50:56:AA:BB:D4"
+    extra_config = [
+      "#!/bin/bash"
+    ]
+  },
   vyos01 = {
     name          = "vyos01"
     customize     = false
