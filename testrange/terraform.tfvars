@@ -20,9 +20,9 @@ vms = {
     network = {
       Default = {
         network_id   = "Default"
-        ipv4_address = "10.10.10.151"
+        ipv4_address = "10.10.10.150"
         netmask      = "24"
-        mac_address  = "00:50:56:AA:BB:C1"
+        mac_address  = "00:50:56:AA:BB:C0"
       }
       Internet = {
         network_id   = "VM Network"
