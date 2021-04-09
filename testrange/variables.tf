@@ -55,19 +55,28 @@ variable "templates" {
   type = list(any)
 }
 
+variable "networks" {
+  type = list(any)
+}
+
 variable "vms" {
   type = map(
     object({
-      name          = string
-      customize     = bool
-      template      = string
-      num_cpus      = string
-      memory        = string
-      ipv4_address  = string
-      netmask       = string
+      name      = string
+      customize = bool
+      template  = string
+      num_cpus  = string
+      memory    = string
+      network = map(
+        object({
+          network_id   = string
+          ipv4_address = string
+          netmask      = string
+          mac_address  = string
+        })
+      )
       gateway       = string
       domain_suffix = string
-      mac_address   = string
       extra_config  = list(string)
     })
   )

@@ -9,78 +9,104 @@ virtual_switch = "DISCONNECTED"
 port_group     = "Default"
 folder         = "/"
 templates      = ["vyos", "centos7"]
+networks       = ["Default", "VM Network"]
 vms = {
   testvm1 = {
-    name          = "testvm1"
-    customize     = true
-    template      = "centos7"
-    num_cpus      = 2
-    memory        = 4096
-    ipv4_address  = "10.10.10.151"
-    netmask       = "24"
+    name      = "testvm1"
+    customize = true
+    template  = "centos7"
+    num_cpus  = 2
+    memory    = 4096
+    network = {
+      Default = {
+        network_id   = "Default"
+        ipv4_address = "10.10.10.151"
+        netmask      = "24"
+        mac_address  = "00:50:56:AA:BB:D1"
+      }
+    }
     gateway       = "10.10.10.254"
     domain_suffix = "frostbytes.io"
-    mac_address   = "00:50:56:AA:BB:D1"
     extra_config = [
       "#!/bin/bash"
     ]
   },
   testvm2 = {
-    name          = "testvm2"
-    customize     = true
-    template      = "centos7"
-    num_cpus      = 2
-    memory        = 4096
-    ipv4_address  = "10.10.10.152"
-    netmask       = "24"
+    name      = "testvm2"
+    customize = true
+    template  = "centos7"
+    num_cpus  = 2
+    memory    = 4096
+    network = {
+      Default = {
+        network_id   = "Default"
+        ipv4_address = "10.10.10.152"
+        netmask      = "24"
+        mac_address  = "00:50:56:AA:BB:D2"
+      }
+    }
     gateway       = "10.10.10.254"
     domain_suffix = "frostbytes.io"
-    mac_address   = "00:50:56:AA:BB:D2"
     extra_config = [
       "#!/bin/bash"
     ]
   },
   testvm3 = {
-    name          = "testvm3"
-    customize     = true
-    template      = "centos7"
-    num_cpus      = 2
-    memory        = 4096
-    ipv4_address  = "10.10.10.153"
-    netmask       = "24"
+    name      = "testvm3"
+    customize = true
+    template  = "centos7"
+    num_cpus  = 2
+    memory    = 4096
+    network = {
+      Default = {
+        network_id   = "Default"
+        ipv4_address = "10.10.10.153"
+        netmask      = "24"
+        mac_address  = "00:50:56:AA:BB:D3"
+      }
+    }
     gateway       = "10.10.10.254"
     domain_suffix = "frostbytes.io"
-    mac_address   = "00:50:56:AA:BB:D3"
     extra_config = [
       "#!/bin/bash"
     ]
   },
   testvm4 = {
-    name          = "testvm4"
-    customize     = true
-    template      = "centos7"
-    num_cpus      = 2
-    memory        = 4096
-    ipv4_address  = "10.10.10.154"
-    netmask       = "24"
+    name      = "testvm4"
+    customize = true
+    template  = "centos7"
+    num_cpus  = 2
+    memory    = 4096
+    network = {
+      Default = {
+        network_id   = "Default"
+        ipv4_address = "10.10.10.154"
+        netmask      = "24"
+        mac_address  = "00:50:56:AA:BB:D4"
+      }
+    }
     gateway       = "10.10.10.254"
     domain_suffix = "frostbytes.io"
-    mac_address   = "00:50:56:AA:BB:D4"
     extra_config = [
       "#!/bin/bash"
     ]
   },
   vyos01 = {
-    name          = "vyos01"
-    customize     = false
-    template      = "vyos"
-    num_cpus      = 2
-    memory        = 4096
-    ipv4_address  = "10.10.10.9"
-    netmask       = "24"
+    name      = "vyos01"
+    customize = false
+    template  = "vyos"
+    num_cpus  = 2
+    memory    = 4096
+    network = {
+      Default = {
+        network_id   = "Default"
+        ipv4_address = "10.10.10.9"
+        netmask      = "24"
+        mac_address  = "00:50:56:AA:BB:D9"
+      }
+    }
     gateway       = "10.10.10.254"
     domain_suffix = "frostbytes.io"
-    mac_address   = "00:50:56:AA:BB:D9"
     extra_config = [
       "#!/bin/bash",
       "set interfaces ethernet eth0 address 10.10.10.9/24",

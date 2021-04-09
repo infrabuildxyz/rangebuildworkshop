@@ -53,6 +53,7 @@ resource "vsphere_tag" "tag" {
 }
 
 data "vsphere_network" "network" {
+  for_each      = toset(var.networks)
   name          = var.port_group
   datacenter_id = data.vsphere_datacenter.dc.id
 }
@@ -77,11 +78,15 @@ resource "vsphere_virtual_machine" "linux" {
   wait_for_guest_ip_timeout  = -1
   wait_for_guest_net_timeout = -1
 
-  network_interface {
-    network_id     = data.vsphere_network.network.id
-    adapter_type   = "vmxnet3"
-    use_static_mac = true
-    mac_address    = each.value.mac_address
+
+  dynamic "network_interface" {
+    for_each = each.value.network
+    content {
+      network_id     = data.vsphere_network.network[network_interface.value.network_id].id
+      adapter_type   = "vmxnet3"
+      use_static_mac = true
+      mac_address    = network_interface.value.mac_address
+    }
   }
 
   disk {
@@ -102,9 +107,12 @@ resource "vsphere_virtual_machine" "linux" {
           domain    = each.value.domain_suffix
         }
 
-        network_interface {
-          ipv4_address = each.value.ipv4_address
-          ipv4_netmask = each.value.netmask
+        dynamic "network_interface" {
+          for_each = each.value.network
+          content {
+            ipv4_address = network_interface.value.ipv4_address
+            ipv4_netmask = network_interface.value.netmask
+          }
         }
 
         ipv4_gateway = each.value.gateway
