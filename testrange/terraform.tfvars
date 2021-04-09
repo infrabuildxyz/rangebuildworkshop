@@ -16,9 +16,9 @@ vms = {
     template      = "centos7"
     num_cpus      = 2
     memory        = 4096
-    ipv4_address  = "192.168.173.151"
+    ipv4_address  = "10.10.10.151"
     netmask       = "24"
-    gateway       = "192.168.173.254"
+    gateway       = "10.10.10.254"
     domain_suffix = "frostbytes.io"
     mac_address   = "00:50:56:AA:BB:D1"
     extra_config = [
@@ -31,9 +31,9 @@ vms = {
     template      = "centos7"
     num_cpus      = 2
     memory        = 4096
-    ipv4_address  = "192.168.173.152"
+    ipv4_address  = "10.10.10.152"
     netmask       = "24"
-    gateway       = "192.168.173.254"
+    gateway       = "10.10.10.254"
     domain_suffix = "frostbytes.io"
     mac_address   = "00:50:56:AA:BB:D2"
     extra_config = [
@@ -46,9 +46,9 @@ vms = {
     template      = "centos7"
     num_cpus      = 2
     memory        = 4096
-    ipv4_address  = "192.168.173.153"
+    ipv4_address  = "10.10.10.153"
     netmask       = "24"
-    gateway       = "192.168.173.254"
+    gateway       = "10.10.10.254"
     domain_suffix = "frostbytes.io"
     mac_address   = "00:50:56:AA:BB:D3"
     extra_config = [
@@ -61,9 +61,9 @@ vms = {
     template      = "centos7"
     num_cpus      = 2
     memory        = 4096
-    ipv4_address  = "192.168.173.154"
+    ipv4_address  = "10.10.10.154"
     netmask       = "24"
-    gateway       = "192.168.173.254"
+    gateway       = "10.10.10.254"
     domain_suffix = "frostbytes.io"
     mac_address   = "00:50:56:AA:BB:D4"
     extra_config = [
@@ -76,16 +76,16 @@ vms = {
     template      = "vyos"
     num_cpus      = 2
     memory        = 4096
-    ipv4_address  = "192.168.173.9"
+    ipv4_address  = "10.10.10.9"
     netmask       = "24"
-    gateway       = "192.168.173.254"
+    gateway       = "10.10.10.254"
     domain_suffix = "frostbytes.io"
     mac_address   = "00:50:56:AA:BB:D9"
     extra_config = [
       "#!/bin/bash",
-      "set interfaces ethernet eth0 address 192.168.173.9/24",
+      "set interfaces ethernet eth0 address 10.10.10.9/24",
       "set interfaces ethernet eth0 hw-id 00:50:56:AA:BB:D3",
-      "set protocols static route 0.0.0.0/0 next-hop 192.168.173.254",
+      "set protocols static route 0.0.0.0/0 next-hop 10.10.10.254",
       "set system name-server 8.8.8.8"
     ]
   }
