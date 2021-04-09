@@ -25,6 +25,21 @@ vms = {
       "#!/bin/bash"
     ]
   },
+  testvm2 = {
+    name          = "testvm2"
+    customize     = true
+    template      = "centos7"
+    num_cpus      = 2
+    memory        = 4096
+    ipv4_address  = "192.168.173.152"
+    netmask       = "24"
+    gateway       = "192.168.173.254"
+    domain_suffix = "frostbytes.io"
+    mac_address   = "00:50:56:AA:BB:D2"
+    extra_config = [
+      "#!/bin/bash"
+    ]
+  },
   testvm3 = {
     name          = "testvm3"
     customize     = true
