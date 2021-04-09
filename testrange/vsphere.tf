@@ -54,7 +54,7 @@ resource "vsphere_tag" "tag" {
 
 data "vsphere_network" "network" {
   for_each      = toset(var.networks)
-  name          = var.port_group
+  name          = each.value
   datacenter_id = data.vsphere_datacenter.dc.id
 }
 
@@ -115,7 +115,8 @@ resource "vsphere_virtual_machine" "linux" {
           }
         }
 
-        ipv4_gateway = each.value.gateway
+        ipv4_gateway    = each.value.gateway
+        dns_server_list = each.value.dns_server_list
       }
     }
   }

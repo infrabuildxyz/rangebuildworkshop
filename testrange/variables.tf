@@ -75,9 +75,10 @@ variable "vms" {
           mac_address  = string
         })
       )
-      gateway       = string
-      domain_suffix = string
-      extra_config  = list(string)
+      gateway         = string
+      dns_server_list = list(string)
+      domain_suffix   = string
+      extra_config    = list(string)
     })
   )
 }
