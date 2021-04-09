@@ -1,3 +1,5 @@
+tag            = "infrabuild"
+tag_category   = "infrabuild.xyz"
 datacenter     = "Datacenter"
 resource_pool  = "esxi.infrabuild.xyz/Resources"
 template       = "centos7"
