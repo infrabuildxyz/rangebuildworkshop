@@ -142,6 +142,27 @@ vms = {
     extra_config = [
       "#!/bin/bash"
     ]
+      },
+  testvm11 = {
+    name      = "testvm11"
+    customize = true
+    template  = "centos7"
+    num_cpus  = 2
+    memory    = 4096
+    network = {
+      Default = {
+        network_id   = "Default"
+        ipv4_address = "10.10.10.161"
+        netmask      = "24"
+        mac_address  = "00:50:56:13:37:11"
+      }
+    }
+    gateway         = "10.10.10.254"
+    dns_server_list = ["10.10.10.254"]
+    domain_suffix   = "frostbytes.io"
+    extra_config = [
+      "#!/bin/bash"
+    ]
   },
   vyos01 = {
     name      = "vyos01"
