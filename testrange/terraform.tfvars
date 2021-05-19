@@ -142,7 +142,7 @@ vms = {
     extra_config = [
       "#!/bin/bash"
     ]
-      },
+  },
   testvm11 = {
     name      = "testvm11"
     customize = true
