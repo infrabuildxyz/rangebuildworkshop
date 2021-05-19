@@ -143,5 +143,5 @@ Snippet after adding `testvm5`
 3. When you commit your change, you'll have to include a comment about the commit.  Mention that you are adding a specific machine.
 4. Finally, open a pull request.  You'll want to submit against the `infrabuildxyz/rangebuildworkshop` `main` branch with your repos working branch as the `HEAD` branch.  For more guidance on how to do this, the docs are here: https://docs.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request-from-a-fork
 5. One you've submitted a pull request, flag someone down in chat and we'll take a look at the pull request for sanity then approve it.  You'll be able to see your code run here: https://github.com/infrabuildxyz/rangebuildworkshop/actions
-6. Access your machine through the jumpbox.  For example, if I was logging into `testvm5` created above, it would look like this `ssh -J sysadmin@147.75.61.133 sysadmin@10.10.10.155`.  Ask in chat for the default password.
+6. Access your machine through the jumpbox.  For example, if I was logging into `testvm5` created above, it would look like this `ssh -J ssh -J sysadmin@147.75.62.116 sysadmin@10.10.10.161`.  Ask in chat for the default password.
 
