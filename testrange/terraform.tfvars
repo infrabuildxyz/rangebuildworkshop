@@ -26,7 +26,7 @@ vms = {
       }
       Internet = {
         network_id   = "VM Network"
-        ipv4_address = "147.75.62.116"
+        ipv4_address = "147.75.61.252"
         netmask      = "29"
         mac_address  = "00:50:56:AA:DD:BB"
       }
