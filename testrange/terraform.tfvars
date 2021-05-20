@@ -143,7 +143,7 @@ vms = {
       "#!/bin/bash"
     ]
   },
-   testvm7 = {
+  testvm7 = {
     name      = "testvm7"
     customize = true
     template  = "centos7"
