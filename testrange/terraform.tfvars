@@ -31,7 +31,7 @@ vms = {
         mac_address  = "00:50:56:AA:DD:BB"
       }
     }
-    gateway         = "147.75.61.129"
+    gateway         = "147.75.62.92"
     dns_server_list = ["8.8.8.8"]
     domain_suffix   = "frostbytes.io"
     extra_config = [
