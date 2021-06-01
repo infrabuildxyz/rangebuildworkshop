@@ -26,12 +26,12 @@ vms = {
       }
       Internet = {
         network_id   = "VM Network"
-        ipv4_address = "147.75.61.252"
+        ipv4_address = "147.75.62.92"
         netmask      = "29"
         mac_address  = "00:50:56:AA:DD:BB"
       }
     }
-    gateway         = "147.75.62.92"
+    gateway         = "147.75.62.89"
     dns_server_list = ["8.8.8.8"]
     domain_suffix   = "frostbytes.io"
     extra_config = [
